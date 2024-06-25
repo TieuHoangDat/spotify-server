@@ -4,12 +4,36 @@
         {
             "src": "./index.js",
             "use": "@vercel/node"
+        },
+        {
+            "src": "./routes/*.js",
+            "use": "@vercel/node"
         }
     ],
     "routes": [
         {
+            "src": "/auth",
+            "dest": "/routes/auth.js"
+        },
+        {
+            "src": "/playList",
+            "dest": "/routes/playList.js"
+        },
+        {
+            "src": "/search",
+            "dest": "/routes/search.js"
+        },
+        {
+            "src": "/songs",
+            "dest": "/routes/songs.js"
+        },
+        {
+            "src": "/users",
+            "dest": "/routes/users.js"
+        },
+        {
             "src": "/(.*)",
-            "dest": "/"
+            "dest": "/index.js"
         }
     ]
 }
